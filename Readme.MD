@@ -1,4 +1,4 @@
-### Please read the following instructions carefully:###
+### Please read the following instructions carefully:
 
 The TapSearch takes in multiple paragraphs of text, assigns a unique ID to each paragraph and stores the words to paragraph mappings on an inverted index.
 
@@ -12,7 +12,7 @@ It mainly consists of three API endpoints:
 
 3) Search - Given a word, search for it and retrieve the top 10 paragraphs (Documents) that contain it.
 
-####Note: Use clear button before entering any data! ####
+#### Note: Use clear button before entering any data!
 
 The code is deployed on Heroku. Try to play around with the deployment.
 
@@ -28,4 +28,4 @@ If you want to setup a local development server in Linux/macOS, follow below men
 
 - `python manage.py runserver`
 
-#### After last step you will be able to run the server locally. ####
+#### After last step you will be able to run the server locally.
