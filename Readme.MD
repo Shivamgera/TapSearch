@@ -18,6 +18,8 @@ The code is deployed on Heroku. Try to play around with the deployment.
 
 If you want to setup a local development server in Linux/macOS, follow below mentioned steps:
 
+-  Clone this repo, then `cd TapSearch`
+
 - `sudo apt install virtualenv`
 
 - `virtualenv -p python .`
