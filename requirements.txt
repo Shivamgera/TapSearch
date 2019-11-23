@@ -1,0 +1,4 @@
+Django==1.11
+pytz==2019.3
+whitenoise==4.1.4
+gunicorn==19.10.0

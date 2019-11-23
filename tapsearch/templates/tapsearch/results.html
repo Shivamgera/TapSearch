@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Results</title>
+</head>
+<body>
+<h1> Below is the search result for "{{ search }}" </h1>
+<p> The word exist : {{ flag }}</p>
+ {% if flag %}
+    <div class='result'>
+
+    <ul class="result">
+    {% for i in result %}
+    {% for item in i %}
+    <li>Document ID = {{ item.doc_index }}</li>
+    <li>Keyword = {{ item.words }}</li>
+    <li>Frequency = {{ item.frequency }}</li>
+    <p>------------------------------------</p>
+    {% endfor %}
+
+    {% endfor %}
+    </ul>
+
+    </div>
+{% endif %}
+
+<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+</body>
+
+</html>

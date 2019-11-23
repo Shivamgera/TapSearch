@@ -1,0 +1,7 @@
+<form method="POST" action="/tapsearch/submitted/">
+{% csrf_token %}
+
+<textarea name="textfield" cols="50" rows="10"></textarea>
+<button type="submit">Upload text</button>
+</form>
+<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
