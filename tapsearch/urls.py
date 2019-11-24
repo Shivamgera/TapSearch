@@ -3,7 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.welcome, name='welcome'),
+    url(r'^$', views.startpage, name='welcome'),
     url(r'^index/',views.indexView,name='index'),
     url(r'^submitted/',views.InputTextView),
     url(r'^search/',views.searchView),
