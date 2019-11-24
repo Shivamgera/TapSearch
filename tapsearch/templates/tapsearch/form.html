@@ -1,7 +1,25 @@
-<form method="POST" action="/tapsearch/submitted/">
-{% csrf_token %}
+<style>
+	body {
+	/*background-image: url("images_bag.jpeg");*/
+	background-color: orange;
+	text-align: center;
+	margin: 20px;
+	}
+</style>
 
-<textarea name="textfield" cols="50" rows="10"></textarea>
-<button type="submit">Upload text</button>
-</form>
-<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+<body>
+	<div class="container-fluid">
+		<div class="text-center">
+			<form method="POST" action="/tapsearch/submitted/">
+			{% csrf_token %}
+			<div style="margin: 30px;">
+				<textarea name="textfield" placeholder="Enter the text to store it in the form of inverted index (Do not copy paste the text from anywhere else)." cols="50" rows="10"></textarea>
+			</div>
+			<button type="submit">Upload text</button>
+			</form>
+			<div style="margin-top: 50px;">
+				<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+			</div>
+		</div>
+	</div>
+</body>

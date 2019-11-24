@@ -4,12 +4,21 @@
 	<title>Search Results</title>
 </head>
 <body>
+<style>
+    body {
+    /*background-image: url("images_bag.jpeg");*/
+    background-color: orange;
+    text-align: center;
+    margin: 20px;
+    }
+</style>
+
 <h1> Below is the search result for "{{ search }}" </h1>
 <p> The word exist : {{ flag }}</p>
  {% if flag %}
     <div class='result'>
 
-    <ul class="result">
+    <ul class="result" style="list-style-type:none;">
     {% for i in result %}
     {% for item in i %}
     <li>Document ID = {{ item.doc_index }}</li>

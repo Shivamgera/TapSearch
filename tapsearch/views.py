@@ -69,8 +69,8 @@ def search(request):
 	else:
 		return HttpResponse('Invalid Request, Go Back!!')
 
-def welcome(request):
-	return HttpResponse("<h2>Welcome to TapSearch<h2><br><a href= '/tapsearch/index'>Index</a><br><a href= '/tapsearch/search'>Search</a><br><a href= '/tapsearch/clear'>Clear</a>")
+# def welcome(request):
+# 	return HttpResponse("<h2>Welcome to TapSearch<h2><br><a href= '/tapsearch/index'>Index</a><br><a href= '/tapsearch/search'>Search</a><br><a href= '/tapsearch/clear'>Clear</a>")
 
 def clear(request):
 	TextMap.objects.all().delete()
@@ -79,4 +79,5 @@ def clear(request):
 	return render(request,'tapsearch/clear.html')
 
 def startpage(request):
-	return HttpResponse("<a href='/tapsearch/'><h2> Go to TapSearch<h2></a>")
+	return render(request,'tapsearch/welcome.html')
+	# return HttpResponse("<a href='/tapsearch/'><h2> Go to TapSearch<h2></a>")

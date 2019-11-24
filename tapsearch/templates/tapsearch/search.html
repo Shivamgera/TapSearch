@@ -1,7 +1,17 @@
-<form method="POST" action="/tapsearch/results/">
-{% csrf_token %}
-<input type="text" name="textfield">
+<style>
+	body {
+	/*background-image: url("images_bag.jpeg");*/
+	background-color: orange;
+	text-align: center;
+	margin: 20px;
+	}
+</style>
+<body>
+	<form method="POST" action="/tapsearch/results/">
+	{% csrf_token %}
+		<input placeholder = "Enter a word to search for" type="text" name="textfield">
 
-<button type="submit">Upload text</button>
-</form>
-<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+		<button type="submit">Upload text</button>
+	</form>
+	<input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+</body>
