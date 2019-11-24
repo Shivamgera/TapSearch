@@ -50,6 +50,7 @@ def InputTextView(request):
 def search(request):
 	if(request.method=='POST'):
 		keyword1 = str(request.POST['textfield'])
+		keyword1 = keyword1.lower()
 		keyword = keyword1.split()
 		res = []
 		for item in keyword:
