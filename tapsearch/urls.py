@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^results/',views.search),
     url(r'^clear/',views.clear)
 
+
 ]

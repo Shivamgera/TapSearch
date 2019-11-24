@@ -81,3 +81,4 @@ def clear(request):
 def startpage(request):
 	return render(request,'tapsearch/welcome.html')
 	# return HttpResponse("<a href='/tapsearch/'><h2> Go to TapSearch<h2></a>")
+
