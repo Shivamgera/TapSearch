@@ -27,15 +27,16 @@ def InputTextView(request):
 		clean_text = clean_text.split('\r\n\r\n')
 		for item in clean_text:
 			mapping = dict()
-			item = item.split('\r\n')
-			for part in item:
-				words = part.split(' ')
-				for word in words:
-					if word in mapping:
-						word_freq = mapping[word]
-					else:
-						word_freq = 0
-					mapping[word] = word_freq+1
+			regex = re.compile(r'[\n\r\t]')
+			item = regex.sub(" ",item)
+			words = item.split(' ')
+			for word in words:
+				if word in mapping:
+					word_freq = mapping[word]
+				else:
+					word_freq = 0
+				mapping[word]= word_freq+1
+
 			for word,freq in mapping.items():
 				data = TextMap(doc_index=idx,words=word,frequency=freq)
 				data.save()
